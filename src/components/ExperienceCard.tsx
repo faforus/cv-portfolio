@@ -21,10 +21,26 @@ function ExperienceCard({}: Props) {
         <h4 className="text-2xl font-light">CEO of Wielechowski Fotografia</h4>
         <p className="font-bold text-center text-2xl mt-1">WIELECHOWSKI.NET</p>
         <div className="flex justify-center space-x-2 my-2">
-          <img src="/image/fifi.jpg" className="h-10 w-10 rounded-full" />
-          <img src="/image/fifi.jpg" className="h-10 w-10 rounded-full" />
-          <img src="/image/fifi.jpg" className="h-10 w-10 rounded-full" />
-          <img src="/image/fifi.jpg" className="h-10 w-10 rounded-full" />
+          <img
+            src="/image/fifi.jpg"
+            className="h-10 w-10 rounded-full"
+            alt="fifi"
+          />
+          <img
+            src="/image/fifi.jpg"
+            className="h-10 w-10 rounded-full"
+            alt="fifi"
+          />
+          <img
+            src="/image/fifi.jpg"
+            className="h-10 w-10 rounded-full"
+            alt="fifi"
+          />
+          <img
+            src="/image/fifi.jpg"
+            className="h-10 w-10 rounded-full"
+            alt="fifi"
+          />
         </div>
       </div>
       <p className="uppercase py-5 text-gray-300">Started: xxxx Ended: xxxx</p>
