@@ -17,7 +17,7 @@ function Contact({}: Props) {
       </h3>
       <div className="flex flex-col space-y-10">
         <h4 className="text-4xl font-semibold text-center">
-          I've just got what you need{" "}
+          I&apos;ve just got what you need{" "}
           <span className="underline decoration-[#f7ab0a]/50">
             Let&apos;s talk!
           </span>

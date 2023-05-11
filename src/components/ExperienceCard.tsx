@@ -13,7 +13,7 @@ function ExperienceCard({}: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px]object-cover object-center"
         src="/image/fifi.jpg"
         alt="fifi"
       />
@@ -43,7 +43,7 @@ function ExperienceCard({}: Props) {
           />
         </div>
       </div>
-      <p className="uppercase py-5 text-gray-300">Started: xxxx Ended: xxxx</p>
+      <p className="uppercase py-5 text-gray-300">Started xxxx Ended xxxx</p>
       <ul className="list-none space-y-4 ml-5 text-lg tracking-widest">
         <li>
           Lorem fifi Filip fifi Filip fifi Filip fifi Filip fifi Filip fifi
