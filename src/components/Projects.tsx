@@ -4,18 +4,17 @@ import { motion } from "framer-motion";
 type Props = {};
 
 function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className="h-screen min-h-[800px] relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div className="relative w-full flex overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
+      <div className="relative w-full flex overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
         <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
           <motion.img
             initial={{
@@ -27,7 +26,7 @@ function Projects({}: Props) {
             viewport={{ once: true }}
             src="image/wielechowski.net.jpg"
             alt="fifi"
-            className="w-[80%] rounded-md"
+            className="w-[80%] max-h-[30vh] object-contain rounded-md"
           />
           <div className="space-y-2 md:space-y-10 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-4xl text-center tracking-widest uppercase">
@@ -68,7 +67,7 @@ function Projects({}: Props) {
             viewport={{ once: true }}
             src="image/monopoly.jpg"
             alt="fifi"
-            className="w-[80%] rounded-md"
+            className="w-[80%] max-h-[30vh] object-contain rounded-md"
           />
           <div className="space-y-2 md:space-y-10 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-4xl text-center tracking-widest uppercase">
