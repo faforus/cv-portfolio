@@ -40,7 +40,7 @@ export default function About({}: Props) {
         <p className="text-xs md:text-base max-w-[500px] tracking-wide text-justify">
           Over many years, photography has been my passion. Over the previous
           few, it started providing me with rewarding but inconsistent income.
-          Seeking greater stability and to maintain my enthusiasm, I've to
+          Seeking greater stability and to maintain my enthusiasm, I&apos;ve to
           transition to programming, currently focusing on JavaScript and React
           development.
           <br />
