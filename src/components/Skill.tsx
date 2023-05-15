@@ -9,7 +9,7 @@ function Skill({ directionLeft }: Props) {
   return (
     <div className="group relative flex cursor-pointer">
       <motion.img
-        initial={{ x: directionLeft ? -100 : 100, opacity: 0 }}
+        initial={{ x: directionLeft ? -50 : 50, opacity: 0 }}
         transition={{ duration: 0.4 }}
         whileInView={{ opacity: 1, x: 0 }}
         src="/image/fifi.jpg"

@@ -12,7 +12,7 @@ function Projects({}: Props) {
       transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
       <div className="relative w-full flex overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
@@ -24,7 +24,7 @@ function Projects({}: Props) {
             >
               <motion.img
                 initial={{
-                  y: -300,
+                  y: -100,
                   opacity: 0,
                 }}
                 transition={{ duration: 1.2 }}
@@ -32,15 +32,16 @@ function Projects({}: Props) {
                 viewport={{ once: true }}
                 src="image/fifi.jpg"
                 alt="fifi"
+                className="w-40 h-32 rounded-md"
               />
               <div className="space-y-10 px-0 md:px-10 max-w6xl">
-                <h4 className="text-4xl font-semibold text-center">
+                <h4 className="text-2xl md:text-4xl font-semibold text-center">
                   <span className="underline decoration-[#f7ab0a]/50">
                     Case Study
                   </span>{" "}
                   {i + 1} of {projects.length}
                 </h4>
-                <p className="text-lg text-center md:text-left tracking-widest">
+                <p className="text-sm md:text-lg text-center md:text-left tracking-widest">
                   Lorem fifi Filip fifi Filip fifi Filip fifi Filip fifi Filip
                   fifi Filip ipsum fifi Filip fifi Filip fifi Filip fifi Filip
                   fifi Filip fifi Filip dolor fifi Filip fifi Filip fifi Filip
