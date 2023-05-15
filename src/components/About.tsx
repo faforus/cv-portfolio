@@ -8,9 +8,9 @@ export default function About({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="relative h-screen flex flex-col items-center justify-center text-center md:text-left md:flex-row max-w-7xl px-10 mx-auto"
+      className="relative h-screen flex flex-col items-center justify-center text-center md:text-left md:flex-row max-w-7xl px-5 md:px-10 mx-auto"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
       <motion.img
@@ -28,15 +28,10 @@ export default function About({}: Props) {
         viewport={{ once: true }}
         src="/image/fifi.jpg"
         alt="fifi"
-        className="mb-5 md:mb-0 mt-16 md:mt-0 flex-shrink-0 w-35 h-36 rounded-full object-contain
+        className="mb-5 md:mb-0 mt-16 md:mt-0 flex-shrink-0 w-28 h-28 rounded-full object-contain
         md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[500px]"
       />
       <div className="space-y-10 px-0 md:px-10">
-        {/* <h4 className=" text-[1.5rem] md:text-4xl">
-          Here is a{" "}
-          <span className="underline decoration-[#f7ab0a]/50">little</span>{" "}
-          background
-        </h4> */}
         <p className="text-xs md:text-base max-w-[500px] tracking-wide text-justify">
           Over many years, photography has been my passion. Over the previous
           few, it started providing me with rewarding but inconsistent income.

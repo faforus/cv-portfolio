@@ -12,7 +12,7 @@ function Skills({}: Props) {
       transition={{ duration: 1.5 }}
       className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Skills
       </h3>
       <div className="grid grid-cols-3 gap-2 md:gap-5">
@@ -53,13 +53,13 @@ function Skills({}: Props) {
 
         <Skill
           logo="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png"
-          wh={16}
+          wh={20}
           directionLeft
           name="HTML"
         />
         <Skill
-          logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png?20160530175649"
-          wh={16}
+          logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png"
+          wh={20}
           directionLeft
           name="CSS"
         />
