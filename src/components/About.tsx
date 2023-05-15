@@ -8,7 +8,7 @@ export default function About({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="relative h-screen min-h-[800px] flex flex-col items-center justify-center text-center md:text-left md:flex-row max-w-7xl px-5 md:px-10 mx-auto"
+      className="relative h-screen min-h-[600px] flex flex-col items-center justify-center text-center md:text-left md:flex-row max-w-7xl px-5 md:px-10 mx-auto"
     >
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
