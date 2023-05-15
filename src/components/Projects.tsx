@@ -73,7 +73,7 @@ function Projects({}: Props) {
           <div className="space-y-2 md:space-y-10 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-4xl text-center tracking-widest uppercase">
               Project{" "}
-              <span className="underline decoration-[#f7ab0a]/50">1</span>
+              <span className="underline decoration-[#f7ab0a]/50">2</span>
             </h4>
             <h4 className="text-2xl md:text-4xl font-semibold text-center">
               FIFIPOLY
