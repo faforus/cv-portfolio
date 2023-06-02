@@ -85,10 +85,10 @@ function Contact({}: Props) {
       transition={{ duration: 1.5 }}
       className="h-screen min-h-[800px] flex relative overflow-hidden flex-col text-left md:flex-row max-w-7x px-10 justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
+      <h3 className="absolute top-24 ml-[20px] uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Contact
       </h3>
-      <div className="-mt-14 md:mt-0">
+      <div className="-mt-10 md:mt-0">
         <div className="flex flex-col space-y-10 textThreeColor">
           <h4 className="text-[1rem] md:text-3xl font-semibold text-center text-[#F8F1F1]">
             Feel free to contact me

@@ -118,7 +118,7 @@ function Projects({}: Props) {
         </svg>
       </motion.div>
 
-      <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
+      <h3 className="absolute top-24 ml-[20px] uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Projects
       </h3>
       <div className="w-full -mt-14 md:mt-0">

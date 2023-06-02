@@ -12,7 +12,7 @@ function Skills({}: Props) {
       transition={{ duration: 1.5 }}
       className="flex relative flex-col text-center md:text-left xl:flex-row w-full xl:px-10 h-screen min-h-[800px] justify-center xl:space-y-0 mx-auto items-center"
     >
-      <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
+      <h3 className="absolute top-24 ml-[20px] uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Skills
       </h3>
       <div className="-mt-14 md:mt-0">

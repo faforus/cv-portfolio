@@ -10,10 +10,10 @@ export default function About({}: Props) {
       transition={{ duration: 1.5 }}
       className="relative h-screen min-h-[600px] flex flex-col items-center justify-center text-center md:text-left md:flex-row max-w-7xl px-5 md:px-10 mx-auto"
     >
-      <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
+      <h3 className="absolute top-24 ml-[20px] uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         About
       </h3>
-      <div className="-mt-10 md:mt-0 flex flex-row">
+      <div className="mt-6 md:mt-0 flex flex-row">
         <motion.img
           initial={{
             x: -200,
