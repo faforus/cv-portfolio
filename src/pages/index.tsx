@@ -6,9 +6,20 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Head from "next/head";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const setFullHeight = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+
+    setFullHeight();
+    window.addEventListener("resize", setFullHeight);
+
+    return () => window.removeEventListener("resize", setFullHeight);
+  }, []);
   return (
     <Fragment>
       <Head>
