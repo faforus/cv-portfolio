@@ -28,7 +28,7 @@ export default function About({}: Props) {
         viewport={{ once: true }}
         src="/image/fifisimba.jpg"
         alt="fifi"
-        className="mb-5 md:mb-0 mt-16 md:mt-0 flex-shrink-0 w-[78px] h-[117px] md:w-[312px] md:h-[470px] rounded-lg"
+        className="hidden md:block mb-5 md:mb-0 mt-16 md:mt-0 flex-shrink-0 w-[78px] h-[117px] md:w-[312px] md:h-[470px] rounded-lg"
       />
       <div className="space-y-10 px-0 md:px-10">
         <p className="text-xs md:text-base max-w-[500px] tracking-wide text-justify textTwoColor">
