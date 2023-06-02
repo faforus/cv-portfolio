@@ -289,7 +289,7 @@ function Projects({}: Props) {
                 Project <span className="textOneColor">4</span>
               </h4>
               <h4 className="text-2xl md:text-4xl font-semibold text-center">
-                REACT MEALS / UDEMY
+                REACT MEALS
               </h4>
               <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
                 React course project
@@ -335,7 +335,7 @@ function Projects({}: Props) {
                 Project <span className="textOneColor">5</span>
               </h4>
               <h4 className="text-2xl md:text-4xl font-semibold text-center">
-                NEXT.JS MEETUPS / UDEMY
+                NEXT.JS MEETUPS
               </h4>
               <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
                 Next.js course project
@@ -381,7 +381,7 @@ function Projects({}: Props) {
                 Project <span className="textOneColor">6</span>
               </h4>
               <h4 className="text-2xl md:text-4xl font-semibold text-center">
-                REDUX CART / UDEMY
+                REDUX CART
               </h4>
               <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
                 Redux course project
