@@ -4,11 +4,23 @@
 
 @layer components {
   .heroButton {
-    @apply px-3 md:px-6 py-2 border border-transparent rounded-full uppercase text-xs tracking-widest text-gray-500 hover:border-[#f7ab0a] hover:text-[#f7ab0a]/40 duration-300;
+    @apply px-3 md:px-6 py-2 border border-transparent rounded-full uppercase text-xs tracking-widest text-[#F8F1F1] hover:border-[#F8F1F1] hover:text-[#E8AA42] duration-300;
     transition-property: border-color, color;
   }
   .contactInput {
-    @apply w-[100%] h-[40px] md:h-auto outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#f7ab0a]/40 focus:text-[#f7ab0a]/40 hover:border-[#f7ab0a]/40 duration-200;
+    @apply w-[100%] h-[40px] md:h-auto outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-[#F8F1F1] placeholder-[#E8AA42] transition-all focus:border-[#E8AA42]/40 hover:border-[#E8AA42]/40 duration-200;
     transition-property: border-color, color;
+  }
+  .bgColor {
+    @apply bg-[#025464];
+  }
+  .textOneColor {
+    @apply text-[#E57C23];
+  }
+  .textTwoColor {
+    @apply text-[#F8F1F1];
+  }
+  .textThreeColor {
+    @apply text-[#E8AA42];
   }
 }

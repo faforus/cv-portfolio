@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" type="image/png" href="/icon.png" />
         <title>Filip Wielechowski</title>
       </Head>
-      <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
+      <div className="bgColor textOneColor h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80">
         <Header />
         <section id="hero" className="snap-start">
           <Hero />

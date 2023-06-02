@@ -19,7 +19,6 @@ function Projects({}: Props) {
     if (myDivRef.current) {
       myDivRef.current.addEventListener("scroll", handleScroll);
     }
-    console.log(scrollPosition);
     return () => {
       if (myDivRef.current) {
         myDivRef.current.removeEventListener("scroll", handleScroll);
@@ -67,70 +66,64 @@ function Projects({}: Props) {
       transition={{ duration: 1.5 }}
       className="h-screen min-h-[800px] relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      {scrollPosition === 0 ? (
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          className="w-8 h-8 z-50 absolute right-2"
-          onClick={() => {
-            scroll("right");
-          }}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="w-8 h-8 z-50 absolute right-2"
+        onClick={() => {
+          scroll("right");
+        }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 md:w-8 md:h-8 md:right-10 cursor-pointer z-20"
+          color="#E57C23"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6 md:w-8 md:h-8 md:right-10 cursor-pointer z-20"
-            color="#f7ab0a"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </motion.div>
-      ) : (
-        ""
-      )}
-      {scrollPosition > 0 ? (
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          className="w-8 h-8 z-50 absolute left-2"
-          onClick={() => {
-            scroll("left");
-          }}
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="w-8 h-8 z-50 absolute left-2"
+        onClick={() => {
+          scroll("left");
+        }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 md:w-8 md:h-8 md:right-10 cursor-pointer"
+          color="#E57C23"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6 md:w-8 md:h-8 md:right-10 cursor-pointer"
-            color="#f7ab0a"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </motion.div>
-      ) : (
-        ""
-      )}
-      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </motion.div>
+
+      <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Projects
       </h3>
       <div
         ref={myDivRef}
-        className="relative w-full flex overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80"
+        className="relative w-full flex overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80"
       >
         <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
           <motion.img
@@ -143,30 +136,35 @@ function Projects({}: Props) {
             viewport={{ once: true }}
             src="image/wielechowski.net.jpg"
             alt="fifi"
-            className="w-[80%] max-h-[30vh] object-contain rounded-md"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
           />
-          <div className="space-y-2 md:space-y-10 px-0 md:px-10 max-w6xl">
-            <h4 className="text-base md:text-4xl text-center tracking-widest uppercase">
-              Project{" "}
-              <span className="underline decoration-[#f7ab0a]/50">1</span>
+          <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
+            <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
+              Project <span className="textOneColor">1</span>
             </h4>
             <h4 className="text-2xl md:text-4xl font-semibold text-center">
               WIELECHOWSKI.NET
             </h4>
-            <p className="text-sm md:text-lg text-center tracking-widest">
-              2 in 1 photography &<br />
-              React / TypeScript portfolio.
+            <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
+              My own original photography portfolio website
+              <br />
+              fully polished and made from scratch!
               <br />
               <br />
-              Please refer to the README file on GitHub repository for more
-              information.
-              <br />
-              <br />
-              LIVE: <a href="https://wielechowski.net/">www.wielechowski.net</a>
+              LIVE:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://wielechowski.net/"
+              >
+                www.wielechowski.net
+              </a>
               <br />
               <br />
               GitHub:{" "}
-              <a href="https://github.com/faforus/wielechowski.ts">
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://github.com/faforus/wielechowski.ts"
+              >
                 faforus/wielechowski.ts
               </a>
             </p>
@@ -184,35 +182,234 @@ function Projects({}: Props) {
             viewport={{ once: true }}
             src="image/monopoly.jpg"
             alt="fifi"
-            className="w-[80%] max-h-[30vh] object-contain rounded-md"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
           />
-          <div className="space-y-2 md:space-y-10 px-0 md:px-10 max-w6xl">
-            <h4 className="text-base md:text-4xl text-center tracking-widest uppercase">
-              Project{" "}
-              <span className="underline decoration-[#f7ab0a]/50">2</span>
+          <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
+            <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
+              Project <span className="textOneColor">2</span>
             </h4>
             <h4 className="text-2xl md:text-4xl font-semibold text-center">
               FIFIPOLY
             </h4>
-            <p className="text-sm md:text-lg text-center tracking-widest">
+            <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
               Monopoly Board Game
               <br />
+              <span className="text-[0.85rem]">
+                My first project, fully functional Monopoly game. The game is
+                entirely my own creation,
+                <br />
+                without any guidance or tutorials on how to structure the game
+                and implement logic.
+              </span>
               <br />
-              Please refer to the README file on GitHub repository for more
-              information.
               <br />
-              <br />
-              DEMO: <a href="http://fifipoly.surge.sh/">fifipoly.surge.sh</a>
+              DEMO:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://fifipoly.web.app/"
+              >
+                fifipoly.web.app
+              </a>
               <br />
               <br />
               GitHub:{" "}
-              <a href="https://github.com/faforus/monopoly">faforus/monopoly</a>
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://github.com/faforus/monopoly"
+              >
+                faforus/monopoly
+              </a>
+            </p>
+            <p className="text-sm md:text-lg text-center tracking-widest"></p>
+          </div>
+        </div>
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
+          <motion.img
+            initial={{
+              y: -100,
+              opacity: 0,
+            }}
+            transition={{ duration: 1.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            src="image/reactpoly.jpg"
+            alt="fifi"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+          />
+          <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
+            <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
+              Project <span className="textOneColor">3</span>
+            </h4>
+            <h4 className="text-2xl md:text-4xl font-semibold text-center">
+              FIFIPOLY v2
+            </h4>
+            <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
+              React version of monopoly
+              <br />
+              This project is in the early stages of development and does not
+              yet have any logic implementation.
+              <br />
+              <br />
+              LIVE:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://reactpoly.web.app/"
+              >
+                reactpoly.web.app
+              </a>
+              <br />
+              <br />
+              GitHub:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://github.com/faforus/reactpoly"
+              >
+                faforus/reactpoly
+              </a>
+            </p>
+            <p className="text-sm md:text-lg text-center tracking-widest"></p>
+          </div>
+        </div>
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
+          <motion.img
+            initial={{
+              y: -100,
+              opacity: 0,
+            }}
+            transition={{ duration: 1.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            src="image/react meals.jpg"
+            alt="fifi"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+          />
+          <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
+            <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
+              Project <span className="textOneColor">4</span>
+            </h4>
+            <h4 className="text-2xl md:text-4xl font-semibold text-center">
+              REACT MEALS / UDEMY
+            </h4>
+            <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
+              React course project
+              <br />
+              Shopping cart with context and HTTP requests.
+              <br />
+              <br />
+              LIVE:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://food-app-with-http-requests.web.app/"
+              >
+                food-app-with-http-requests.web.app
+              </a>
+              <br />
+              <br />
+              GitHub:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://github.com/faforus/food-app-cart-with-http"
+              >
+                faforus/food-app-cart-with-http
+              </a>
+            </p>
+            <p className="text-sm md:text-lg text-center tracking-widest"></p>
+          </div>
+        </div>
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
+          <motion.img
+            initial={{
+              y: -100,
+              opacity: 0,
+            }}
+            transition={{ duration: 1.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            src="image/meetups.jpg"
+            alt="fifi"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+          />
+          <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
+            <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
+              Project <span className="textOneColor">5</span>
+            </h4>
+            <h4 className="text-2xl md:text-4xl font-semibold text-center">
+              NEXT.JS MEETUPS / UDEMY
+            </h4>
+            <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
+              Next.js course project
+              <br />
+              Meetups app with MongoDB.
+              <br />
+              <br />
+              LIVE:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://next-js-meetup-app-nine.vercel.app/"
+              >
+                next-js-meetup-app-nine.vercel.app
+              </a>
+              <br />
+              <br />
+              GitHub:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://github.com/faforus/next-js-meetup-app"
+              >
+                faforus/next-js-meetup-app
+              </a>
+            </p>
+            <p className="text-sm md:text-lg text-center tracking-widest"></p>
+          </div>
+        </div>
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
+          <motion.img
+            initial={{
+              y: -100,
+              opacity: 0,
+            }}
+            transition={{ duration: 1.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            src="image/reduxcart.jpg"
+            alt="fifi"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+          />
+          <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
+            <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
+              Project <span className="textOneColor">6</span>
+            </h4>
+            <h4 className="text-2xl md:text-4xl font-semibold text-center">
+              REDUX CART / UDEMY
+            </h4>
+            <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
+              Redux course project
+              <br />
+              Shopping cart with HTTP requests and Firebase Database.
+              <br />
+              <br />
+              LIVE:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://advanced-redux-47538.web.app/"
+              >
+                advanced-redux-47538.web.app
+              </a>
+              <br />
+              <br />
+              GitHub:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://github.com/faforus/advanced-redux-food-app"
+              >
+                faforus/advanced-redux-food-app
+              </a>
             </p>
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
       </div>
-      <div className="w-full absolute top-[30%] bg-[#f7ab0a]/10 left-0 h-[500px] -skew-y-12"></div>
+      <div className="w-full absolute top-[30%] bg-[#E57C23]/10 left-0 h-[500px] -skew-y-12"></div>
     </motion.div>
   );
 }

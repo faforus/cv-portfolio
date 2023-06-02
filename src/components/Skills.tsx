@@ -12,7 +12,7 @@ function Skills({}: Props) {
       transition={{ duration: 1.5 }}
       className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 h-screen min-h-[800px] justify-center xl:space-y-0 mx-auto items-center"
     >
-      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Skills
       </h3>
       <div className="grid grid-cols-3 gap-2 md:gap-5">
@@ -26,24 +26,28 @@ function Skills({}: Props) {
         />
         <Skill
           logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207"
-          wh={20}
+          w="w-20"
+          h="w-20"
           name="React"
         />
         <Skill
           logo="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"
-          wh={16}
-          bg="white"
+          w="w-16"
+          h="w-16"
           name="Next.js"
         />
         <Skill
-          logo="https://cdn.worldvectorlogo.com/logos/redux.svg"
-          wh={16}
+          logo="image/redux.png"
+          w="w-16"
+          h="w-16"
           rounded="rounded"
           name="Redux"
         />
         <Skill
           logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/600px-Tailwind_CSS_Logo.svg.png?20211001194333"
           name="Tailwind"
+          w="w-16"
+          h="w-16"
         />
         <Skill
           logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/PostCSS_Logo.svg/607px-PostCSS_Logo.svg.png?20160808161407"
@@ -53,13 +57,15 @@ function Skills({}: Props) {
 
         <Skill
           logo="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png"
-          wh={20}
+          w="w-16"
+          h="w-16"
           directionLeft
           name="HTML"
         />
         <Skill
           logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png"
-          wh={20}
+          w="w-12"
+          h="w-12"
           directionLeft
           name="CSS"
         />

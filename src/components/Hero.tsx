@@ -17,22 +17,24 @@ function Hero({}: Props) {
   });
   return (
     <div className="h-screen min-h-[800px] flex flex-col space-y-2 md:space-y-8 items-center justify-center text-center overflow-hidden">
-      <BackgroundCircles />
-      <img
-        className="relative rounded-full h-32 w-32 max-auto object-cover"
-        src="/image/fifi.jpg"
-        alt="Fifi"
-      />
+      <div className="flex flex-col items-center justify-normal">
+        <BackgroundCircles />
+        <img
+          className="relative rounded-full h-44 w-44 md:h-64 md:w-64 max-auto object-cover"
+          src="/image/fifi.jpg"
+          alt="Fifi"
+        />
+      </div>
       <div className="z-20">
-        <h2 className="text-xs tracking-[10px] md:text-sm uppercase text-gray-500 md:tracking-[15px]">
+        <h2 className="text-xs tracking-[10px] md:text-sm uppercase textTwoColor md:tracking-[15px] cursor-default">
           React Developer
         </h2>
       </div>
       <h1 className="text-[1.4rem] md:text-5xl lg:text-6xl font-semibold px-10">
         <span className="mr-3">{text}</span>
-        <Cursor cursorColor="#F7AB0A" />
+        <Cursor cursorColor="#E8AA42" />
       </h1>
-      <div className="z-20 relative -top-2 md:top-0">
+      <div className="z-20 relative -top-2 md:-top-4">
         <Link href="#about">
           <button className="heroButton">About</button>
         </Link>

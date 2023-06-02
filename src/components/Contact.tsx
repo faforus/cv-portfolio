@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { motion } from "framer-motion";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import isEmail from "validator/lib/isEmail";
 
 type Props = {};
 
@@ -12,11 +13,12 @@ function Contact({}: Props) {
   const [sendingForm, setSendingForm] = useState(false);
   const [formIsSent, setFormIsSent] = useState(false);
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (true) {
+    if (validateForm()) {
       setError(false);
       setSendingForm(true);
       const url = "https://sendemail-2qkjfrtbsq-uw.a.run.app";
@@ -54,6 +56,28 @@ function Contact({}: Props) {
     }
   };
 
+  const validateForm = () => {
+    if (name.trim().length < 3) {
+      setErrorMessage("The name needs to be at least 3 characters long.");
+      return false;
+    }
+    if (!isEmail(email)) {
+      setErrorMessage("Please enter a valid email address.");
+      return false;
+    }
+    if (surname.trim().length < 5) {
+      setErrorMessage("The subject needs to be at least 5 characters long.");
+      return false;
+    }
+    if (message.trim().length < 8) {
+      setErrorMessage("The message needs to be at least 8 characters long.");
+      return false;
+    }
+
+    setErrorMessage("");
+    return true;
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -61,34 +85,40 @@ function Contact({}: Props) {
       transition={{ duration: 1.5 }}
       className="h-screen min-h-[800px] flex relative overflow-hidden flex-col text-left md:flex-row max-w-7x px-10 justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Contact
       </h3>
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-[1rem] md:text-4xl font-semibold text-center">
-          Feel free to contact me for more information or{" "}
-          <span className="underline decoration-[#f7ab0a]/50">
-            the full CV.
-          </span>
+      <div className="flex flex-col space-y-10 textThreeColor">
+        <h4 className="text-[1rem] md:text-3xl font-semibold text-center text-[#F8F1F1]">
+          Feel free to contact me
+          <br />
+          for more information or{" "}
+          <span className="text-[#E57C23]">the full CV.</span>
         </h4>
         <div className="space-y-2 md:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#f7ab0a] w-5 h-5 md:h-7 md:w-7 animate-pulse" />
-            <p className="text-[1rem] tracking-widest md:text-2xl">
+            <PhoneIcon className="text-[#E57C23] w-5 h-5 md:h-7 md:w-7" />
+            <a
+              className="text-[1rem] tracking-widest md:text-[1.3rem] hover:text-[#E57C23]"
+              href="tel:+48722265649"
+            >
               +48 722 265 649
-            </p>
+            </a>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#f7ab0a]  w-5 h-5 md:h-7 md:w-7 animate-pulse" />
-            <p className="text-[1rem] tracking-widest md:text-2xl">
+            <EnvelopeIcon className="text-[#E57C23]  w-5 h-5 md:h-7 md:w-7" />
+            <a
+              className="text-[1rem] tracking-widest md:text-[1.3rem] hover:text-[#E57C23]"
+              href="mailto:filip.wielechowski@gmail.com"
+            >
               filip.wielechowski@gmail.com
-            </p>
+            </a>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#f7ab0a]  w-5 h-5 md:h-7 md:w-7 animate-pulse" />
-            <p className="text-[1rem] tracking-widest md:text-2xl">
+            <MapPinIcon className="text-[#E57C23] w-5 h-5 md:h-7 md:w-7" />
+            <p className="text-[1rem] tracking-widest md:text-[1.3rem]">
               Gdynia, Trójmiasto
             </p>
           </div>
@@ -97,51 +127,58 @@ function Contact({}: Props) {
           onSubmit={handleSubmit}
           className="flex flex-col space-y-2 w-[100%] md:w-fit mx-auto"
         >
-          <div className="flex space-x-2">
-            <input
-              placeholder="Name"
-              className="contactInput"
-              type="text"
-              id="name"
-              value={name}
-              name="Name"
-              onChange={(event) => setName(event.target.value)}
-            />
-            <input
-              placeholder="Email"
-              className="contactInput"
-              type="email"
-              id="email"
-              value={email}
-              name="email"
-              onChange={(event) => setEmail(event.target.value)}
-            />
-          </div>
-          <input
-            placeholder="Subject"
-            className="contactInput"
-            type="text"
-            id="surname"
-            value={surname}
-            name="Surname"
-            onChange={(event) => setSurname(event.target.value)}
-          />
-          <textarea
-            placeholder="Message"
-            id="message"
-            value={message}
-            name="message"
-            onChange={(event) => setMessage(event.target.value)}
-            className="contactInput resize-none h-[100px] md:h-[150px] scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80"
-          />
+          {formIsSent ? (
+            ""
+          ) : (
+            <Fragment>
+              <div className="flex space-x-2">
+                <input
+                  placeholder="Name"
+                  className="contactInput"
+                  type="text"
+                  id="name"
+                  value={name}
+                  name="Name"
+                  onChange={(event) => setName(event.target.value)}
+                />
+                <input
+                  placeholder="Email"
+                  className="contactInput"
+                  type="email"
+                  id="email"
+                  value={email}
+                  name="email"
+                  onChange={(event) => setEmail(event.target.value)}
+                />
+              </div>
+              <input
+                placeholder="Subject"
+                className="contactInput"
+                type="text"
+                id="surname"
+                value={surname}
+                name="Surname"
+                onChange={(event) => setSurname(event.target.value)}
+              />
+              <textarea
+                placeholder="Message"
+                id="message"
+                value={message}
+                name="message"
+                onChange={(event) => setMessage(event.target.value)}
+                className="contactInput resize-none h-[100px] md:h-[150px] scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#E57C23]/80"
+              />
+            </Fragment>
+          )}
+          {errorMessage !== "" ? <p>{errorMessage}</p> : ""}
           <button
             type="submit"
             disabled={sendingForm || formIsSent}
-            className={`bg-[#f7ab0a] py-2 md:py-7 px-10 rounded-md text-black font-bold text-base md:text-lg ${
+            className={`bg-[#E57C23] hover:bg-[#E8AA42] py-2 md:py-5 px-10 rounded-md textTwoColor font-bold text-base md:text-md ${
               sendingForm ? "bg-gray-400 cursor-not-allowed" : ""
             } ${error ? "bg-red-700 cursor-not-allowed" : ""} ${
-              formIsSent ? "bg-green-400" : ""
-            }`}
+              formIsSent ? "bg-green-600" : ""
+            } ${formIsSent ? "hover:bg-green-600" : ""}`}
           >
             {sendingForm
               ? "Sending..."
