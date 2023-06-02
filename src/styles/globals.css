@@ -24,7 +24,3 @@
     @apply text-[#E8AA42];
   }
 }
-
-section {
-  height: calc(100 * var(--vh));
-}
