@@ -88,7 +88,7 @@ function Contact({}: Props) {
       <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Contact
       </h3>
-      <div className="-mt-14">
+      <div className="-mt-14 md:mt-0">
         <div className="flex flex-col space-y-10 textThreeColor">
           <h4 className="text-[1rem] md:text-3xl font-semibold text-center text-[#F8F1F1]">
             Feel free to contact me
