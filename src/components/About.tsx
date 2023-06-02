@@ -13,7 +13,7 @@ export default function About({}: Props) {
       <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         About
       </h3>
-      <div className="-mt-14 md:mt-0 flex flex-row">
+      <div className="-mt-10 md:mt-0 flex flex-row">
         <motion.img
           initial={{
             x: -200,

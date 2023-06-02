@@ -10,7 +10,7 @@ function Skills({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 h-screen min-h-[800px] justify-center xl:space-y-0 mx-auto items-center"
+      className="flex relative flex-col text-center md:text-left xl:flex-row w-full xl:px-10 h-screen min-h-[800px] justify-center xl:space-y-0 mx-auto items-center"
     >
       <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Skills
@@ -78,6 +78,7 @@ function Skills({}: Props) {
           />
         </div>
       </div>
+      <div className="w-full absolute top-[20%] md:top-[30%] bg-[#E57C23]/5 left-0 h-[400px] md:h-[500px] skew-y-12"></div>
     </motion.div>
   );
 }

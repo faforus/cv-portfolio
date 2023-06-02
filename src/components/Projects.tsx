@@ -121,7 +121,7 @@ function Projects({}: Props) {
       <h3 className="absolute top-20 uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Projects
       </h3>
-      <div className="-mt-14 md:mt-0">
+      <div className="w-full -mt-14 md:mt-0">
         <div
           ref={myDivRef}
           className="relative w-full flex overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80"
@@ -411,7 +411,7 @@ function Projects({}: Props) {
           </div>
         </div>
       </div>
-      <div className="w-full absolute top-[30%] bg-[#E57C23]/10 left-0 h-[500px] -skew-y-12"></div>
+      <div className="w-full absolute top-[25%] md:top-[30%] bg-[#E57C23]/10 left-0 h-[300px] md:h-[500px] -skew-y-12"></div>
     </motion.div>
   );
 }
