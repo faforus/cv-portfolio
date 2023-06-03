@@ -22,7 +22,7 @@ function Hero({}: Props) {
         <img
           className="relative rounded-full h-44 w-44 md:h-64 md:w-64 max-auto object-cover"
           src="/image/fifi.jpg"
-          alt="Fifi"
+          alt="Filip Wielechowski - React Developer Portfolio / TypeScript / JavaScript / React / Next.js / Redux / Tailwind / PostCSS / Git"
         />
       </div>
       <div className="z-20">

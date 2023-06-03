@@ -136,7 +136,7 @@ function Projects({}: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src="image/wielechowski.net.jpg"
-              alt="fifi"
+              alt="Photography Website - I built this website from scratch, and all the photographs used in the project were taken and edited by me"
               className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
             />
             <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
@@ -182,7 +182,7 @@ function Projects({}: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src="image/monopoly.jpg"
-              alt="fifi"
+              alt="This is my original implementation of the classic Monopoly board game. I embarked on this project when I was only one month into learning JavaScript."
               className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
             />
             <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
@@ -234,7 +234,7 @@ function Projects({}: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src="image/reactpoly.jpg"
-              alt="fifi"
+              alt="In development - This is an improved react version of Monopoly"
               className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
             />
             <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
@@ -281,7 +281,7 @@ function Projects({}: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src="image/react meals.jpg"
-              alt="fifi"
+              alt="React shopping cart using context and HTTP requests"
               className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
             />
             <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
@@ -327,7 +327,7 @@ function Projects({}: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src="image/meetups.jpg"
-              alt="fifi"
+              alt="Next.js meetups app using mongodb"
               className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
             />
             <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
@@ -373,7 +373,7 @@ function Projects({}: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src="image/reduxcart.jpg"
-              alt="fifi"
+              alt="Redux shopping cart with firebase database"
               className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
             />
             <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
