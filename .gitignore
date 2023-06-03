@@ -3,6 +3,10 @@
 # firebase
 /.firebase
 /.github
+/.next
+.firebaseserc
+firebase.json
+next.config.js
 
 # dependencies
 /node_modules

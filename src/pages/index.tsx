@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <Fragment>
       <Head>
-        <link rel="icon" type="image/png" href="/icon.png" />
+        <link rel="icon" type="image/png" href="image/icon.png" />
         <title>Filip Wielechowski</title>
 
         <meta
@@ -37,7 +37,7 @@ export default function Home() {
       </Head>
       <div className="bgColor textOneColor h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80">
         <Header />
-        <section id="hero" className="snap-start">
+        <section id="hero" className="snap-center">
           <Hero />
         </section>
         <section id="about" className="snap-center">
@@ -46,13 +46,13 @@ export default function Home() {
         {/* <section id="experience" className="snap-center">
           <Experience />
         </section> */}
-        <section id="skills" className="snap-start">
+        <section id="skills" className="snap-center">
           <Skills />
         </section>
-        <section id="projects" className="snap-start">
+        <section id="projects" className="snap-center">
           <Projects />
         </section>
-        <section id="contact" className="snap-start">
+        <section id="contact" className="snap-center">
           <Contact />
         </section>
       </div>

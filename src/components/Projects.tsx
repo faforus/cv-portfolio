@@ -7,6 +7,7 @@ function Projects({}: Props) {
   const myDivRef = useRef<HTMLDivElement | null>(null);
 
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [pageWidth, setPageWidth] = useState(0);
 
   const handleScroll = () => {
     if (myDivRef.current) {
@@ -14,6 +15,10 @@ function Projects({}: Props) {
       setScrollPosition(currentPosition);
     }
   };
+
+  useEffect(() => {
+    setPageWidth((myDivRef.current?.offsetWidth || 0) * 5);
+  }, [pageWidth, scrollPosition]);
 
   useEffect(() => {
     if (myDivRef.current) {
@@ -66,57 +71,63 @@ function Projects({}: Props) {
       transition={{ duration: 1.5 }}
       className="h-screen min-h-[800px] relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        className="w-8 h-8 z-50 absolute right-2"
-        onClick={() => {
-          scroll("right");
-        }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6 md:w-8 md:h-8 md:right-10 cursor-pointer z-20"
-          color="#E57C23"
+      {scrollPosition >= pageWidth / 5 && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="w-8 h-8 z-50 absolute left-2"
+          onClick={() => {
+            scroll("left");
+          }}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      </motion.div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 md:w-8 md:h-8 md:right-10 cursor-pointer"
+            color="#E57C23"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </motion.div>
+      )}
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        className="w-8 h-8 z-50 absolute left-2"
-        onClick={() => {
-          scroll("left");
-        }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6 md:w-8 md:h-8 md:right-10 cursor-pointer"
-          color="#E57C23"
+      {scrollPosition < pageWidth && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className={`w-8 h-8 z-50 absolute right-2 ${
+            scrollPosition === 0 ? "animate-bounce" : ""
+          }`}
+          onClick={() => {
+            scroll("right");
+          }}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      </motion.div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 md:w-8 md:h-8 md:right-10 cursor-pointer z-20"
+            color="#E57C23"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </motion.div>
+      )}
 
       <h3 className="absolute top-24 ml-[20px] uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Projects
