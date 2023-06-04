@@ -25,6 +25,6 @@
   }
 }
 
-.about {
+.viewportHeight {
   height: calc(100 * var(--vh));
 }

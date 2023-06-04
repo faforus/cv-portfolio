@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -6,9 +7,10 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Head from "next/head";
-import { Fragment } from "react";
+import useViewportHeight from "@/hooks/useViewportHeight";
 
 export default function Home() {
+  useViewportHeight();
   return (
     <Fragment>
       <Head>
