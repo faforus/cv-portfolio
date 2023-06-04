@@ -208,11 +208,9 @@ function Projects({}: Props) {
               Monopoly Board Game
               <br />
               <span className="text-[0.85rem]">
-                My first project, fully functional Monopoly game. The game is
-                entirely my own creation,
-                <br />
-                without any guidance or tutorials on how to structure the game
-                and implement logic.
+                Fully functional Monopoly game. The game is entirely my own
+                creation, without any guidance or tutorials on how to structure
+                the game and implement logic.
               </span>
               <br />
               <br />
