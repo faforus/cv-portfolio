@@ -2,7 +2,6 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import Link from "next/link";
 
 type Props = {};
 
@@ -79,7 +78,6 @@ function Header({}: Props) {
           Get In Touch
         </p>
       </motion.div>
-      {/* </Link> */}
     </header>
   );
 }

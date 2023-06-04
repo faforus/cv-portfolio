@@ -24,3 +24,7 @@
     @apply text-[#E8AA42];
   }
 }
+
+.viewportHeight {
+  height: calc(100 * var(--vh));
+}

@@ -1,19 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 type Props = {};
 export default function About({}: Props) {
+  const divRef = useRef<HTMLDivElement>(null);
+  const [divHeight, setDivHeight] = useState<number>(0);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (divRef.current) {
+        setDivHeight(divRef.current.offsetHeight);
+      }
+    };
+    updateHeight();
+
+    window.addEventListener("resize", updateHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+    };
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="relative h-screen min-h-[600px] flex flex-col items-center justify-center text-center md:text-left md:flex-row max-w-7xl px-5 md:px-10 mx-auto"
+      className="viewportHeight flex flex-col px-5 md:px-10"
     >
-      <h3 className="absolute top-24 ml-[20px] uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
-        About
-      </h3>
-      <div className="mt-6 md:mt-0 flex flex-row items-center justify-center">
+      <div className="mt-[75px] h-[75px] flex items-center justify-center">
+        <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
+          About
+        </h3>
+      </div>
+      <div className="flex h-full flex-row items-center justify-center">
         <motion.img
           initial={{
             x: -200,
@@ -29,9 +49,11 @@ export default function About({}: Props) {
           viewport={{ once: true }}
           src="/image/fifisimba.jpg"
           alt="Filip Wielechowski - React Developer Portfolio / TypeScript / JavaScript / React / Next.js / Redux / Tailwind / PostCSS / Git"
-          className="hidden md:block mb-5 md:mb-0 mt-16 md:mt-0 flex-shrink-0 w-[395px] h-auto rounded-lg"
+          className={`hidden md:block ${
+            divHeight > 600 ? "md:hidden" : ""
+          } mb-5 md:mb-0 mt-16 md:mt-0 flex-shrink-0 w-[395px] h-auto rounded-lg`}
         />
-        <div className="space-y-10 px-0 md:px-10">
+        <div ref={divRef} className="space-y-10 px-0 md:px-10">
           <p className="text-xs md:text-base max-w-[500px] tracking-wide text-justify textTwoColor">
             Photography has been my long-standing passion, providing rewarding
             yet inconsistent income. To ensure stability and sustain my
