@@ -69,7 +69,7 @@ function Projects({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="viewportHeight relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className="viewportHeight relative flex overflow-hidden flex-col text-left max-w-full justify-evenly mx-auto items-center z-0"
     >
       {scrollPosition >= pageWidth / 5 && (
         <motion.div
@@ -129,12 +129,14 @@ function Projects({}: Props) {
         </motion.div>
       )}
 
-      <h3 className="absolute top-24 ml-[20px] uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
-        Projects
-      </h3>
+      <div className="mt-[75px] h-[75px] flex items-center justify-center">
+        <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
+          Projects
+        </h3>
+      </div>
       <div
         ref={myDivRef}
-        className="relative w-full flex overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80"
+        className="-mt-[75px] flex h-full relative w-full overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80"
       >
         <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
           <motion.img

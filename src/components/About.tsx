@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 type Props = {};
 export default function About({}: Props) {
+  const divRef = useRef<HTMLDivElement>(null);
+  const [divHeight, setDivHeight] = useState<number>(0);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (divRef.current) {
+        setDivHeight(divRef.current.offsetHeight);
+      }
+    };
+    updateHeight();
+
+    window.addEventListener("resize", updateHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+    };
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -31,9 +49,11 @@ export default function About({}: Props) {
           viewport={{ once: true }}
           src="/image/fifisimba.jpg"
           alt="Filip Wielechowski - React Developer Portfolio / TypeScript / JavaScript / React / Next.js / Redux / Tailwind / PostCSS / Git"
-          className="hidden md:block mb-5 md:mb-0 mt-16 md:mt-0 flex-shrink-0 w-[395px] h-auto rounded-lg"
+          className={`hidden md:block ${
+            divHeight > 600 ? "md:hidden" : ""
+          } mb-5 md:mb-0 mt-16 md:mt-0 flex-shrink-0 w-[395px] h-auto rounded-lg`}
         />
-        <div className="space-y-10 px-0 md:px-10">
+        <div ref={divRef} className="space-y-10 px-0 md:px-10">
           <p className="text-xs md:text-base max-w-[500px] tracking-wide text-justify textTwoColor">
             Photography has been my long-standing passion, providing rewarding
             yet inconsistent income. To ensure stability and sustain my

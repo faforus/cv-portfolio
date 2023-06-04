@@ -83,14 +83,14 @@ function Contact({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="viewportHeight flex relative overflow-hidden flex-col text-left md:flex-row max-w-7x px-10 justify-evenly mx-auto items-center"
+      className="viewportHeight flex relative overflow-hidden flex-col text-left max-w-7x px-10 justify-evenly mx-auto items-center"
     >
       <div className="mt-[75px] h-[75px] flex items-center justify-center">
         <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
           Contact
         </h3>
       </div>
-      <div className="-mt-[75px] flex h-full flex-row items-center justify-center">
+      <div className="-mt-[75px] flex h-full items-center justify-center">
         <div className="flex flex-col space-y-5 md:space-y-10 textThreeColor">
           <h4 className="text-[1rem] md:text-3xl font-semibold text-center text-[#F8F1F1]">
             Feel free to contact me

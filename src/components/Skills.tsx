@@ -10,7 +10,7 @@ function Skills({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="viewportHeight flex relative flex-col px-5 md:px-10"
+      className="viewportHeight flex relative flex-col"
     >
       <div className="mt-[75px] h-[75px] flex items-center justify-center">
         <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
@@ -80,7 +80,9 @@ function Skills({}: Props) {
           />
         </div>
       </div>
-      <div className="w-full absolute top-[20%] md:top-[30%] bg-[#E57C23]/5 left-0 h-[400px] md:h-[500px] skew-y-12"></div>
+      <div className="absolute w-full h-full flex items-center justify-center">
+        <div className="mt-8 w-full bg-[#E57C23]/10 left-0 h-[400px] md:h-[500px] skew-y-12"></div>
+      </div>
     </motion.div>
   );
 }
