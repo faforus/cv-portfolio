@@ -10,7 +10,7 @@ function Skills({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex relative flex-col text-center md:text-left xl:flex-row w-full xl:px-10 h-screen min-h-[600px] justify-center xl:space-y-0 mx-auto items-center bg-orange-500"
+      className="viewportHeight flex relative flex-col text-center md:text-left xl:flex-row w-full xl:px-10 justify-center xl:space-y-0 mx-auto items-center bg-orange-500"
     >
       <h3 className="absolute top-24 ml-[20px] uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         Skills

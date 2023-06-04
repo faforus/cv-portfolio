@@ -16,7 +16,7 @@ function Hero({}: Props) {
     delaySpeed: 2000,
   });
   return (
-    <div className="viewportHeight flex flex-col space-y-2 md:space-y-8 items-center justify-center text-center overflow-hidden bg-amber-200">
+    <div className="viewportHeight flex flex-col space-y-2 md:space-y-8 items-center justify-center text-center overflow-hidden bg-lime-800">
       <div className="flex flex-col items-center justify-normal">
         <BackgroundCircles />
         <img
