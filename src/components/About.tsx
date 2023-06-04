@@ -8,12 +8,14 @@ export default function About({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="viewportHeight relative flex flex-col items-center justify-center text-center md:text-left md:flex-row max-w-7xl px-5 md:px-10 mx-auto bg-red-600"
+      className="viewportHeight flex flex-col px-5 md:px-10"
     >
-      <h3 className="absolute top-24 ml-[20px] uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
-        About
-      </h3>
-      <div className="mt-6 md:mt-0 flex flex-row items-center justify-center">
+      <div className="mt-[75px] h-[75px] flex items-center justify-center">
+        <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
+          About
+        </h3>
+      </div>
+      <div className="flex h-full flex-row items-center justify-center">
         <motion.img
           initial={{
             x: -200,
