@@ -25,6 +25,11 @@
   }
 }
 
+html {
+  background-color: #025464;
+}
+
 .viewportHeight {
   height: calc(100 * var(--vh));
+  height: 100dvh;
 }

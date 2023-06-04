@@ -79,18 +79,13 @@ function Contact({}: Props) {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      className="viewportHeight flex flex-col overflow-hidden px-10"
-    >
+    <div className="viewportHeight flex flex-col px-6">
       <div className="mt-[75px] h-[75px] flex items-center justify-center">
         <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
           Contact
         </h3>
       </div>
-      <div className="flex h-full items-center justify-center">
+      <div className="flex h-full flex-row items-center justify-center">
         <div className="flex flex-col space-y-5 md:space-y-10 textThreeColor">
           <h4 className="text-[1rem] md:text-3xl font-semibold text-center text-[#F8F1F1]">
             Feel free to contact me
@@ -126,7 +121,14 @@ function Contact({}: Props) {
               </p>
             </div>
           </div>
-          <form
+          <motion.form
+            initial={{
+              y: 100,
+              opacity: 0,
+            }}
+            transition={{ duration: 1.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             onSubmit={handleSubmit}
             className="flex flex-col space-y-2 w-[100%] md:w-fit mx-auto"
           >
@@ -191,10 +193,10 @@ function Contact({}: Props) {
                 ? "Sent"
                 : "Submit"}
             </button>
-          </form>
+          </motion.form>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

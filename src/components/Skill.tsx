@@ -17,6 +17,7 @@ function Skill({ directionLeft, logo, w, h, rounded, name }: Props) {
         initial={{ x: directionLeft ? -50 : 50, opacity: 0 }}
         transition={{ duration: 0.4 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         className={`rounded-full border-2 border-[#F8F1F1] w-20 h-20 flex items-center justify-center z-20`}
       >
         <img

@@ -23,7 +23,7 @@ function Hero({}: Props) {
       transition={{ duration: 1.5 }}
       className="viewportHeight flex flex-col items-center justify-center overflow-hidden"
     >
-      <div className="pt-[120px] space-y-2 md:space-y-8 items-center justify-center text-center">
+      <div className="pt-[140px] space-y-2 md:space-y-8 items-center justify-center text-center">
         <div className="flex flex-col items-center justify-normal">
           <BackgroundCircles />
           <img
