@@ -21,7 +21,7 @@ function Hero({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="viewportHeight flex flex-col items-center justify-center overflow-hidden"
+      className="viewportHeight min-h-[632px] md:min-h-[800px] flex flex-col items-center justify-center overflow-hidden"
     >
       <div className="pt-[140px] space-y-2 md:space-y-8 items-center justify-center text-center">
         <div className="flex flex-col items-center justify-normal">

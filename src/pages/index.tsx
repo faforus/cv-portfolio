@@ -55,7 +55,7 @@ export default function Home() {
         <section id="projects" className="snap-start">
           <Projects />
         </section>
-        <section id="contact" className="snap-end">
+        <section id="contact" className="snap-start">
           <Contact />
         </section>
       </div>

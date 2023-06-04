@@ -65,7 +65,7 @@ function Projects({}: Props) {
   }
 
   return (
-    <div className="viewportHeight md:min-h-[800px] relative flex flex-col overflow-hidden max-w-full justify-evenly mx-auto items-center">
+    <div className="viewportHeight min-h-[632px] md:min-h-[800px] relative flex flex-col overflow-hidden max-w-full justify-evenly mx-auto items-center">
       {scrollPosition >= pageWidth / 5 && (
         <motion.div
           initial={{ opacity: 0 }}
