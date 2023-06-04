@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -11,6 +11,7 @@ import useViewportHeight from "@/hooks/useViewportHeight";
 
 export default function Home() {
   useViewportHeight();
+
   return (
     <Fragment>
       <Head>
@@ -46,8 +47,8 @@ export default function Home() {
           <About />
         </section>
         {/* <section id="experience" className="snap-center">
-          <Experience />
-        </section> */}
+<Experience />
+</section> */}
         <section id="skills" className="snap-start">
           <Skills />
         </section>

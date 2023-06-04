@@ -79,7 +79,7 @@ function Contact({}: Props) {
   };
 
   return (
-    <div className="viewportHeight flex flex-col px-6">
+    <div className="viewportHeight md:min-h-[800px] flex flex-col px-6">
       <div className="mt-[75px] h-[75px] flex items-center justify-center">
         <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
           Contact

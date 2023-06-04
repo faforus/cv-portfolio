@@ -29,7 +29,7 @@ function Skill({ directionLeft, logo, w, h, rounded, name }: Props) {
       </motion.div>
       <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-[#E57C23] w-20 h-20 rounded-full z-20">
         <div className="flex items-center justify-center h-full">
-          <p className="text-s font-bold text-black opacity-100">{name}</p>
+          <p className="text-sm font-bold text-black opacity-100">{name}</p>
         </div>
       </div>
     </div>

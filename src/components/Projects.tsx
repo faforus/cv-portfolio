@@ -65,12 +65,7 @@ function Projects({}: Props) {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      className="viewportHeight relative flex flex-col overflow-hidden max-w-full justify-evenly mx-auto items-center"
-    >
+    <div className="viewportHeight md:min-h-[800px] relative flex flex-col overflow-hidden max-w-full justify-evenly mx-auto items-center">
       {scrollPosition >= pageWidth / 5 && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -421,7 +416,7 @@ function Projects({}: Props) {
         </div>
       </div>
       <div className="w-full absolute top-[25%] md:top-[30%] bg-[#E57C23]/10 left-0 h-[300px] md:h-[500px] -skew-y-12"></div>
-    </motion.div>
+    </div>
   );
 }
 

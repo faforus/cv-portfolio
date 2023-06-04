@@ -22,12 +22,7 @@ export default function About({}: Props) {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      className="viewportHeight flex flex-col px-5 md:px-10"
-    >
+    <div className="viewportHeight md:min-h-[800px] flex flex-col px-5 md:px-10">
       <div className="mt-[75px] h-[75px] flex items-center justify-center">
         <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
           About
@@ -84,6 +79,6 @@ export default function About({}: Props) {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
