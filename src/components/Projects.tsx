@@ -136,9 +136,9 @@ function Projects({}: Props) {
       </div>
       <div
         ref={myDivRef}
-        className="-mt-[75px] flex h-full relative w-full overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80"
+        className="flex h-full relative w-full overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80"
       >
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen">
           <motion.img
             initial={{
               y: -100,
@@ -184,7 +184,7 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
+        <div className="-mt-[95px] w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen">
           <motion.img
             initial={{
               y: -100,
@@ -234,7 +234,7 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen">
           <motion.img
             initial={{
               y: -100,
@@ -281,7 +281,7 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen">
           <motion.img
             initial={{
               y: -100,
@@ -327,7 +327,7 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen">
           <motion.img
             initial={{
               y: -100,
@@ -373,7 +373,7 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen mt-2">
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-screen">
           <motion.img
             initial={{
               y: -100,
