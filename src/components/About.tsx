@@ -1,14 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import useViewportHeight from "@/hooks/useViewportHeight";
 type Props = {};
 export default function About({}: Props) {
+  useViewportHeight();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="relative h-screen min-h-[600px] flex flex-col items-center justify-center text-center md:text-left md:flex-row max-w-7xl px-5 md:px-10 mx-auto bg-red-600"
+      className="about relative h-screen min-h-[600px] flex flex-col items-center justify-center text-center md:text-left md:flex-row max-w-7xl px-5 md:px-10 mx-auto bg-red-600"
     >
       <h3 className="absolute top-24 ml-[20px] uppercase tracking-[20px] textTwoColor text-2xl cursor-default">
         About
