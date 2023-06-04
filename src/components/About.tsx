@@ -1,11 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import useViewportHeight from "@/hooks/useViewportHeight";
 
 type Props = {};
 export default function About({}: Props) {
-  useViewportHeight();
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
