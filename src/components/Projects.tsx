@@ -69,7 +69,7 @@ function Projects({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="viewportHeight relative flex overflow-hidden flex-col text-left max-w-full justify-evenly mx-auto items-center z-0"
+      className="viewportHeight relative flex flex-col overflow-hidden max-w-full justify-evenly mx-auto items-center"
     >
       {scrollPosition >= pageWidth / 5 && (
         <motion.div
