@@ -2,6 +2,7 @@ import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "@/components/BackgroundCircles";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -16,8 +17,13 @@ function Hero({}: Props) {
     delaySpeed: 2000,
   });
   return (
-    <div className="viewportHeight flex flex-col items-center justify-center overflow-hidden">
-      <div className="mt-[90px] space-y-2 md:space-y-8 items-center justify-center text-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="viewportHeight flex flex-col items-center justify-center overflow-hidden"
+    >
+      <div className="pt-[120px] space-y-2 md:space-y-8 items-center justify-center text-center">
         <div className="flex flex-col items-center justify-normal">
           <BackgroundCircles />
           <img
@@ -31,10 +37,12 @@ function Hero({}: Props) {
             React Developer
           </h2>
         </div>
-        <h1 className="text-[1.4rem] md:text-5xl lg:text-6xl font-semibold px-10">
-          <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#E8AA42" />
-        </h1>
+        <div className="w-[375px] md:w-auto">
+          <h1 className="text-[1.5rem] md:text-5xl lg:text-6xl font-semibold">
+            <span className="mr-1">{text}</span>
+            <Cursor cursorColor="#E8AA42" />
+          </h1>
+        </div>
         <div className="z-20 relative -top-2 md:-top-4">
           <Link href="#about">
             <button className="heroButton">About</button>
@@ -50,7 +58,7 @@ function Hero({}: Props) {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
