@@ -35,8 +35,8 @@ export default function About({}: Props) {
           <p className="text-xs md:text-base max-w-[500px] tracking-wide text-justify textTwoColor">
             Photography has been my long-standing passion, providing rewarding
             yet inconsistent income. To ensure stability and sustain my
-            enthusiasm, I've transitioned to programming, currently focusing on
-            JavaScript and React development.
+            enthusiasm, I&apos;ve transitioned to programming, currently
+            focusing on JavaScript and React development.
             <br />
             <br />
             I have successfully completed two extensive courses and
