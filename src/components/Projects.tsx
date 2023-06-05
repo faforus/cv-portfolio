@@ -73,7 +73,7 @@ function Projects({ snap }: Props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="w-8 h-8 z-50 absolute left-2 md:-ml-[700px] md:left-auto"
+          className="w-8 h-8 z-50 absolute left-2 md:-ml-[750px] md:left-auto"
           onClick={() => {
             scroll("left");
           }}
@@ -101,7 +101,7 @@ function Projects({ snap }: Props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className={`w-8 h-8 z-50 absolute right-2 md:-mr-[700px] md:right-auto ${
+          className={`w-8 h-8 z-50 absolute right-2 md:-mr-[750px] md:right-auto ${
             scrollPosition === 0 ? "animate-bounce" : ""
           }`}
           onClick={() => {
