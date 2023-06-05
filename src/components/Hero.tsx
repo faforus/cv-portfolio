@@ -13,7 +13,7 @@ function Hero({ setSnap }: Props) {
 
   setTimeout(() => {
     setPopup(false);
-  }, 2500);
+  }, 3500);
 
   const [text] = useTypewriter({
     words: [
@@ -31,7 +31,7 @@ function Hero({ setSnap }: Props) {
       transition={{ duration: 1.5 }}
       className="viewportHeight min-h-[632px] md:min-h-[800px] flex flex-col items-center justify-center overflow-hidden"
     >
-      <div className="relative pt-[140px] space-y-2 md:space-y-8 items-center justify-center text-center">
+      <div className="pt-[140px] space-y-2 md:space-y-8 items-center justify-center text-center">
         <div className="flex flex-col items-center justify-normal">
           <BackgroundCircles />
           <img
@@ -58,9 +58,6 @@ function Hero({ setSnap }: Props) {
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
-          {/* <Link href="#experience">
-          <button className="heroButton">Experience</button>
-        </Link> */}
           <Link href="#skills">
             <button className="heroButton">Skills</button>
           </Link>
@@ -68,14 +65,20 @@ function Hero({ setSnap }: Props) {
             <button className="heroButton">Projects</button>
           </Link>
         </div>
-        {popup && (
-          <div className="absolute w-full">
-            <p className="textThreeColor text-xs md:text-base">
-              Click on my photo to toggle snapping scroll
-            </p>
-          </div>
-        )}
       </div>
+      {popup && (
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5, delay: 2 }}
+          className="absolute bottom-0 mb-10 w-full flex items-center justify-center z-[100]"
+        >
+          <p className="textTwoColor text-xs md:text-base bg-[#E57C23] p-4 md:p-6 rounded-xl min-w-[200px] md:min-w-[400px] font-semibold text-center">
+            Click on my photo to toggle snapping scroll
+          </p>
+        </motion.div>
+      )}
     </motion.div>
   );
 }
