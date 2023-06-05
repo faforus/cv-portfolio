@@ -1,9 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-type Props = {};
+type Props = {
+  snap: boolean;
+};
 
-function Projects({}: Props) {
+function Projects({ snap }: Props) {
   const myDivRef = useRef<HTMLDivElement | null>(null);
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -36,13 +38,13 @@ function Projects({}: Props) {
       switch (direction) {
         case "left":
           myDivRef.current.scrollBy({
-            left: -myDivRef.current.clientWidth * 0.3,
+            left: -myDivRef.current.clientWidth * 1,
             behavior: "smooth",
           });
           break;
         case "right":
           myDivRef.current.scrollBy({
-            left: myDivRef.current.clientWidth * 0.3,
+            left: myDivRef.current.clientWidth * 1,
             behavior: "smooth",
           });
           break;
@@ -71,7 +73,7 @@ function Projects({}: Props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="w-8 h-8 z-50 absolute left-2"
+          className="w-8 h-8 z-50 absolute left-2 md:-ml-[700px] md:left-auto"
           onClick={() => {
             scroll("left");
           }}
@@ -99,7 +101,7 @@ function Projects({}: Props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className={`w-8 h-8 z-50 absolute right-2 ${
+          className={`w-8 h-8 z-50 absolute right-2 md:-mr-[700px] md:right-auto ${
             scrollPosition === 0 ? "animate-bounce" : ""
           }`}
           onClick={() => {
@@ -125,15 +127,21 @@ function Projects({}: Props) {
       )}
 
       <div className="mt-[75px] h-[75px] flex items-center justify-center">
-        <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
+        <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default -mr-[20px]">
           Projects
         </h3>
       </div>
       <div
         ref={myDivRef}
-        className="flex h-full relative w-full overflow-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80"
+        className={`flex h-full relative w-full overflow-scroll overflow-y-hidden ${
+          snap ? "snap-x snap-mandatory" : ""
+        } z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80`}
       >
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-full">
+        <div
+          className={`w-full flex flex-shrink-0 items-center justify-center ${
+            snap ? "snap-center" : ""
+          } flex-col space-y-5 p-6 md:p-44 h-full`}
+        >
           <motion.img
             initial={{
               y: -100,
@@ -178,7 +186,11 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-full">
+        <div
+          className={`w-full flex flex-shrink-0 items-center justify-center ${
+            snap ? "snap-center" : ""
+          } flex-col space-y-5 p-6 md:p-44 h-full`}
+        >
           <motion.img
             initial={{
               y: -100,
@@ -228,7 +240,11 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-full">
+        <div
+          className={`w-full flex flex-shrink-0 items-center justify-center ${
+            snap ? "snap-center" : ""
+          } flex-col space-y-5 p-6 md:p-44 h-full`}
+        >
           <motion.img
             initial={{
               y: -100,
@@ -278,7 +294,11 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-full">
+        <div
+          className={`w-full flex flex-shrink-0 items-center justify-center ${
+            snap ? "snap-center" : ""
+          } flex-col space-y-5 p-6 md:p-44 h-full`}
+        >
           <motion.img
             initial={{
               y: -100,
@@ -325,7 +345,11 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-full">
+        <div
+          className={`w-full flex flex-shrink-0 items-center justify-center ${
+            snap ? "snap-center" : ""
+          } flex-col space-y-5 p-6 md:p-44 h-full`}
+        >
           <motion.img
             initial={{
               y: -100,
@@ -371,7 +395,11 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-full">
+        <div
+          className={`w-full flex flex-shrink-0 items-center justify-center ${
+            snap ? "snap-center" : ""
+          } flex-col space-y-5 p-6 md:p-44 h-full`}
+        >
           <motion.img
             initial={{
               y: -100,
@@ -417,7 +445,11 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-full">
+        <div
+          className={`w-full flex flex-shrink-0 items-center justify-center ${
+            snap ? "snap-center" : ""
+          } flex-col space-y-5 p-6 md:p-44 h-full`}
+        >
           <motion.img
             initial={{
               y: -100,
@@ -463,7 +495,11 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest"></p>
           </div>
         </div>
-        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-full">
+        <div
+          className={`w-full flex flex-shrink-0 items-center justify-center ${
+            snap ? "snap-center" : ""
+          } flex-col space-y-5 p-6 md:p-44 h-full`}
+        >
           <motion.img
             initial={{
               y: -100,

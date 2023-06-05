@@ -3,9 +3,11 @@ import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
-type Props = {};
+type Props = {
+  snap: boolean;
+};
 
-function Header({}: Props) {
+function Header({ snap }: Props) {
   const router = useRouter();
 
   const scrollToContact = () => {
@@ -13,7 +15,11 @@ function Header({}: Props) {
   };
 
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+    <header
+      className={`sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-[100] xl:items-center ${
+        snap ? "" : "bgColor"
+      }`}
+    >
       <motion.div
         initial={{
           x: -500,

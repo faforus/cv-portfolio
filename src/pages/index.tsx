@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -9,6 +9,7 @@ import Head from "next/head";
 import useViewportHeight from "@/hooks/useViewportHeight";
 
 export default function Home() {
+  const [snap, setSnap] = useState(true);
   useViewportHeight();
 
   return (
@@ -38,20 +39,20 @@ export default function Home() {
         <link rel="apple-touch-icon" href="image/appletouch.jpg" />
       </Head>
       <div className="viewportHeight bgColor textOneColor snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#E8AA42]/80">
-        <Header />
-        <section id="hero" className="snap-start">
-          <Hero />
+        <Header snap={snap} />
+        <section id="hero" className={`${snap ? "snap-start" : ""}`}>
+          <Hero setSnap={setSnap} />
         </section>
-        <section id="about" className="snap-start">
+        <section id="about" className={`${snap ? "snap-start" : ""}`}>
           <About />
         </section>
-        <section id="skills" className="snap-start">
+        <section id="skills" className={`${snap ? "snap-start" : ""}`}>
           <Skills />
         </section>
-        <section id="projects" className="snap-start">
-          <Projects />
+        <section id="projects" className={`${snap ? "snap-start" : ""}`}>
+          <Projects snap={snap} />
         </section>
-        <section id="contact" className="snap-start">
+        <section id="contact" className={`${snap ? "snap-start" : ""}`}>
           <Contact />
         </section>
       </div>

@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "@/components/BackgroundCircles";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-type Props = {};
+type Props = {
+  setSnap: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-function Hero({}: Props) {
+function Hero({ setSnap }: Props) {
+  const [popup, setPopup] = useState(true);
+
+  setTimeout(() => {
+    setPopup(false);
+  }, 2500);
+
   const [text] = useTypewriter({
     words: [
       "< Thrives on Challenges />",
@@ -23,10 +31,13 @@ function Hero({}: Props) {
       transition={{ duration: 1.5 }}
       className="viewportHeight min-h-[632px] md:min-h-[800px] flex flex-col items-center justify-center overflow-hidden"
     >
-      <div className="pt-[140px] space-y-2 md:space-y-8 items-center justify-center text-center">
+      <div className="relative pt-[140px] space-y-2 md:space-y-8 items-center justify-center text-center">
         <div className="flex flex-col items-center justify-normal">
           <BackgroundCircles />
           <img
+            onClick={() => {
+              setSnap((prev) => !prev);
+            }}
             className="relative rounded-full h-44 w-44 md:h-64 md:w-64 max-auto object-cover"
             src="/image/fifi.jpg"
             alt="Filip Wielechowski - React Developer Portfolio / TypeScript / JavaScript / React / Next.js / Redux / Tailwind / PostCSS / Git"
@@ -57,6 +68,13 @@ function Hero({}: Props) {
             <button className="heroButton">Projects</button>
           </Link>
         </div>
+        {popup && (
+          <div className="absolute w-full">
+            <p className="textThreeColor text-xs md:text-base">
+              Click on my photo to toggle snapping scroll
+            </p>
+          </div>
+        )}
       </div>
     </motion.div>
   );

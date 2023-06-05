@@ -24,7 +24,7 @@ export default function About({}: Props) {
   return (
     <div className="viewportHeight min-h-[632px] md:min-h-[800px] flex flex-col px-5 md:px-10">
       <div className="mt-[75px] h-[75px] flex items-center justify-center">
-        <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
+        <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default -mr-[20px]">
           About
         </h3>
       </div>

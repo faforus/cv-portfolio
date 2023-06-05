@@ -7,7 +7,7 @@ function Skills({}: Props) {
   return (
     <div className="viewportHeight min-h-[632px] md:min-h-[800px] flex relative flex-col">
       <div className="mt-[75px] h-[75px] flex items-center justify-center">
-        <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default">
+        <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default -mr-[20px]">
           Skills
         </h3>
       </div>
