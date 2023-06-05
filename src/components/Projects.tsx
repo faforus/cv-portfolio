@@ -17,7 +17,7 @@ function Projects({}: Props) {
   };
 
   useEffect(() => {
-    setPageWidth((myDivRef.current?.offsetWidth || 0) * 5);
+    setPageWidth((myDivRef.current?.offsetWidth || 0) * 6);
   }, [pageWidth, scrollPosition]);
 
   useEffect(() => {
@@ -66,7 +66,7 @@ function Projects({}: Props) {
 
   return (
     <div className="viewportHeight min-h-[632px] md:min-h-[800px] relative flex flex-col overflow-hidden max-w-full justify-evenly mx-auto items-center">
-      {scrollPosition >= pageWidth / 5 && (
+      {scrollPosition >= pageWidth / 6 && (
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -238,13 +238,63 @@ function Projects({}: Props) {
             transition={{ duration: 1.2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            src="image/forms.jpg"
+            alt="redux forms"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+          />
+          <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
+            <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
+              Project <span className="textOneColor">3</span>
+            </h4>
+            <h4 className="text-2xl md:text-4xl font-semibold text-center">
+              REDUX FORMS / PARTIAL
+            </h4>
+            <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
+              Next.js 13.4.4 / Redux Forms
+              <br />
+              This project underwent data sanitization process and is in early
+              development.
+              <br />
+              It features a multi page redux form with validation and another
+              formik form.
+              <br />
+              <br />
+              LIVE:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://formscut.vercel.app/"
+              >
+                formscut.vercel.app
+              </a>
+              <br />
+              <br />
+              GitHub:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://github.com/faforus/forms"
+              >
+                faforus/forms
+              </a>
+            </p>
+            <p className="text-sm md:text-lg text-center tracking-widest"></p>
+          </div>
+        </div>
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-full">
+          <motion.img
+            initial={{
+              y: -100,
+              opacity: 0,
+            }}
+            transition={{ duration: 1.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             src="image/reactpoly.jpg"
             alt="In development - This is an improved react version of Monopoly"
             className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
-              Project <span className="textOneColor">3</span>
+              Project <span className="textOneColor">4</span>
             </h4>
             <h4 className="text-2xl md:text-4xl font-semibold text-center">
               FIFIPOLY v2
@@ -291,7 +341,7 @@ function Projects({}: Props) {
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
-              Project <span className="textOneColor">4</span>
+              Project <span className="textOneColor">5</span>
             </h4>
             <h4 className="text-2xl md:text-4xl font-semibold text-center">
               REACT MEALS
@@ -337,7 +387,7 @@ function Projects({}: Props) {
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
-              Project <span className="textOneColor">5</span>
+              Project <span className="textOneColor">6</span>
             </h4>
             <h4 className="text-2xl md:text-4xl font-semibold text-center">
               NEXT.JS MEETUPS
@@ -383,7 +433,7 @@ function Projects({}: Props) {
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
-              Project <span className="textOneColor">6</span>
+              Project <span className="textOneColor">7</span>
             </h4>
             <h4 className="text-2xl md:text-4xl font-semibold text-center">
               REDUX CART
