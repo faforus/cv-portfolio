@@ -259,7 +259,10 @@ function Projects({}: Props) {
               <br />
               <br />
               LIVE:{" "}
-              <a className="textThreeColor hover:text-[#E57C23]" href="  ">
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://formscut.vercel.app/"
+              >
                 formscut.vercel.app
               </a>
               <br />
