@@ -17,7 +17,7 @@ function Projects({}: Props) {
   };
 
   useEffect(() => {
-    setPageWidth((myDivRef.current?.offsetWidth || 0) * 6);
+    setPageWidth((myDivRef.current?.offsetWidth || 0) * 7);
   }, [pageWidth, scrollPosition]);
 
   useEffect(() => {
@@ -66,7 +66,7 @@ function Projects({}: Props) {
 
   return (
     <div className="viewportHeight min-h-[632px] md:min-h-[800px] relative flex flex-col overflow-hidden max-w-full justify-evenly mx-auto items-center">
-      {scrollPosition >= pageWidth / 6 && (
+      {scrollPosition >= pageWidth / 7 && (
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -144,7 +144,7 @@ function Projects({}: Props) {
             viewport={{ once: true }}
             src="image/wielechowski.net.jpg"
             alt="Photography Website - I built this website from scratch, and all the photographs used in the project were taken and edited by me"
-            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl border-2 border-white"
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
@@ -154,9 +154,8 @@ function Projects({}: Props) {
               WIELECHOWSKI.NET
             </h4>
             <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
-              My own original photography portfolio website
-              <br />
-              fully polished and made from scratch!
+              My own original React Photography Portfolio website fully polished
+              and made from scratch!
               <br />
               <br />
               LIVE:{" "}
@@ -190,7 +189,7 @@ function Projects({}: Props) {
             viewport={{ once: true }}
             src="image/monopoly.jpg"
             alt="This is my original implementation of the classic Monopoly board game. I embarked on this project when I was only one month into learning JavaScript."
-            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl border-2 border-white"
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
@@ -202,7 +201,7 @@ function Projects({}: Props) {
             <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
               Monopoly Board Game
               <br />
-              <span className="text-[0.85rem]">
+              <span className="text-[0.85rem] md:text-lg">
                 Fully functional Monopoly game. The game is entirely my own
                 creation, without any guidance or tutorials on how to structure
                 the game and implement logic.
@@ -240,7 +239,7 @@ function Projects({}: Props) {
             viewport={{ once: true }}
             src="image/forms.jpg"
             alt="redux forms"
-            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl border-2 border-white"
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
@@ -287,7 +286,7 @@ function Projects({}: Props) {
             viewport={{ once: true }}
             src="image/reactpoly.jpg"
             alt="In development - This is an improved react version of Monopoly"
-            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl border-2 border-white"
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
@@ -297,7 +296,7 @@ function Projects({}: Props) {
               FIFIPOLY v2
             </h4>
             <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
-              React version of monopoly
+              React / Tailwind version of monopoly
               <br />
               This project is in the early stages of development and does not
               yet have any logic implementation.
@@ -332,13 +331,59 @@ function Projects({}: Props) {
             transition={{ duration: 1.2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            src="image/react meals.jpg"
+            src="image/wielechowski.me.jpg"
             alt="React shopping cart using context and HTTP requests"
-            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl border-2 border-white"
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
               Project <span className="textOneColor">5</span>
+            </h4>
+            <h4 className="text-2xl md:text-4xl font-semibold text-center">
+              WIELECHOWSKI.ME
+            </h4>
+            <p className="text-sm md:text-lg text-center tracking-widest textTwoColor">
+              Next.js / Tailwind Portfolio
+              <br />
+              Inspired by YouTube tutorial, but highly modified and improved.
+              <br />
+              <br />
+              LIVE:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://wielechowski.me/"
+              >
+                wielechowski.me
+              </a>
+              <br />
+              <br />
+              GitHub:{" "}
+              <a
+                className="textThreeColor hover:text-[#E57C23]"
+                href="https://github.com/faforus/cv-portfolio"
+              >
+                faforus/cv-portfolio
+              </a>
+            </p>
+            <p className="text-sm md:text-lg text-center tracking-widest"></p>
+          </div>
+        </div>
+        <div className="w-full flex flex-shrink-0 items-center justify-center snap-center flex-col space-y-5 p-6 md:p-44 h-full">
+          <motion.img
+            initial={{
+              y: -100,
+              opacity: 0,
+            }}
+            transition={{ duration: 1.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            src="image/react meals.jpg"
+            alt="React shopping cart using context and HTTP requests"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl border-2 border-white"
+          />
+          <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
+            <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
+              Project <span className="textOneColor">6</span>
             </h4>
             <h4 className="text-2xl md:text-4xl font-semibold text-center">
               REACT MEALS
@@ -380,11 +425,11 @@ function Projects({}: Props) {
             viewport={{ once: true }}
             src="image/meetups.jpg"
             alt="Next.js meetups app using mongodb"
-            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl border-2 border-white"
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
-              Project <span className="textOneColor">6</span>
+              Project <span className="textOneColor">7</span>
             </h4>
             <h4 className="text-2xl md:text-4xl font-semibold text-center">
               NEXT.JS MEETUPS
@@ -426,11 +471,11 @@ function Projects({}: Props) {
             viewport={{ once: true }}
             src="image/reduxcart.jpg"
             alt="Redux shopping cart with firebase database"
-            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl"
+            className="max-w-[80%] max-h-[30vh] rounded-md md:rounded-xl border-2 border-white"
           />
           <div className="space-y-2 md:space-y-2 px-0 md:px-10 max-w6xl">
             <h4 className="text-base md:text-2xl text-center tracking-widest uppercase textThreeColor">
-              Project <span className="textOneColor">7</span>
+              Project <span className="textOneColor">8</span>
             </h4>
             <h4 className="text-2xl md:text-4xl font-semibold text-center">
               REDUX CART
