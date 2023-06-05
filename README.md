@@ -2,8 +2,10 @@
 
 Next.js / TypeScript / Tailwind / FramerMotion Library
 
-CV / Portfolio one pager
+CV / Portfolio App
 
-I used Sonny Sangha's tutorial as a starting point to create this app, but I have since modified and improved it to better suit my needs. Throughout this process, I learned new tricks with Tailwind and implemented other best practices to make the app more responsive and efficient.
+This app was inspired by Sonny Sangha's tutorial, but I have made significant improvements by removing minor bugs and redesigning the layout for better responsiveness, which was lacking in the original version.
 
-Please note that this is only a draft version, and I plan to make significant improvements and personalize it further to align with my preferences.
+Throughout the development process, I learned new tricks with Tailwind CSS and implemented other best practices to enhance the app's responsiveness and efficiency.
+
+The main cahhange I encountered was particularly with the mobile viewport height, which includes the additional address or navigation bar. However, I learned a JavaScript workaround and also discovered newly implemented mobile viewport units such as dvh, lvh, and svh.
