@@ -13,7 +13,7 @@ function Skills({}: Props) {
         </h3>
       </div>
       <div className="flex h-full flex-row items-center justify-center">
-        <div className="grid grid-cols-3 gap-2 md:gap-5 -mt-[75px]">
+        <div className="grid grid-cols-3 gap-2 md:gap-5 -mt-[105px]">
           <Skill
             logo="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png"
             name="JavaScript"
@@ -52,7 +52,6 @@ function Skills({}: Props) {
             directionLeft
             name="PostCSS"
           />
-
           <Skill
             logo="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png"
             w="w-16"
@@ -67,11 +66,22 @@ function Skills({}: Props) {
             directionLeft
             name="CSS"
           />
-          <span></span>
+          <Skill
+            logo="https://cdn.worldvectorlogo.com/logos/gitlab.svg"
+            directionLeft
+            name="GitLab"
+          />
           <Skill
             logo="https://cdn-icons-png.flaticon.com/512/25/25231.png"
             directionLeft
             name="GitHub"
+          />
+          <Skill
+            logo="image/clickup.svg"
+            directionLeft
+            name="ClickUp"
+            w="w-12"
+            h="w-12"
           />
         </div>
       </div>
