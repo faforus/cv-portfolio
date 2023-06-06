@@ -3,6 +3,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "@/components/BackgroundCircles";
 import { scroll } from "@/helpers/scroll";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Props = {
   setSnap: React.Dispatch<React.SetStateAction<boolean>>;
@@ -55,14 +56,16 @@ function Hero({ setSnap }: Props) {
           </h1>
         </div>
         <div className="z-20 relative -top-2 md:-top-4">
-          <button
-            onClick={() => {
-              scroll("about");
-            }}
-            className="heroButton"
-          >
-            About
-          </button>
+          <Link href={"#about"}>
+            <button
+              onClick={() => {
+                scroll("about");
+              }}
+              className="heroButton"
+            >
+              About
+            </button>
+          </Link>
           <button
             onClick={() => {
               scroll("skills");
