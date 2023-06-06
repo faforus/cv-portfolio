@@ -23,7 +23,7 @@ function Skill({ directionLeft, logo, w, h, rounded, name }: Props) {
         <img
           src={logo}
           height="100"
-          alt={name}
+          alt=""
           className={`rounded-full ${rounded} object-contain ${w} ${h} filter group-hover:grayscale transition duration-300 ease-in-out`}
         />
       </motion.div>

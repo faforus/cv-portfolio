@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "@/components/BackgroundCircles";
-import Link from "next/link";
+import { scroll } from "@/helpers/scroll";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -48,22 +48,37 @@ function Hero({ setSnap }: Props) {
             React Developer
           </h2>
         </div>
-        <div className="w-[375px] md:w-auto">
+        <div className="w-[310px] md:w-[800px]">
           <h1 className="text-[1.5rem] md:text-5xl lg:text-6xl font-semibold">
             <span className="mr-1">{text}</span>
             <Cursor cursorColor="#E8AA42" />
           </h1>
         </div>
         <div className="z-20 relative -top-2 md:-top-4">
-          <Link href="#about">
-            <button className="heroButton">About</button>
-          </Link>
-          <Link href="#skills">
-            <button className="heroButton">Skills</button>
-          </Link>
-          <Link href="#projects">
-            <button className="heroButton">Projects</button>
-          </Link>
+          <button
+            onClick={() => {
+              scroll("about");
+            }}
+            className="heroButton"
+          >
+            About
+          </button>
+          <button
+            onClick={() => {
+              scroll("skills");
+            }}
+            className="heroButton"
+          >
+            Skills
+          </button>
+          <button
+            onClick={() => {
+              scroll("projects");
+            }}
+            className="heroButton"
+          >
+            Projects
+          </button>
         </div>
       </div>
       {popup && (

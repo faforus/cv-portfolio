@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import { motion } from "framer-motion";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import isEmail from "validator/lib/isEmail";
+import { scroll } from "@/helpers/scroll";
 
 type Props = {};
 
@@ -79,7 +80,7 @@ function Contact({}: Props) {
   };
 
   return (
-    <div className="viewportHeight min-h-[632px] md:min-h-[800px] flex flex-col px-6">
+    <div className="viewportHeight relative min-h-[632px] md:min-h-[800px] flex flex-col px-6">
       <div className="mt-[75px] h-[75px] flex items-center justify-center">
         <h3 className="uppercase tracking-[20px] text-center textTwoColor text-2xl cursor-default -mr-[20px]">
           Contact
@@ -196,6 +197,28 @@ function Contact({}: Props) {
           </motion.form>
         </div>
       </div>
+      <button
+        onClick={() => {
+          scroll("hero");
+        }}
+        className="absolute bottom-0 right-0 mb-2 mr-2 md:mb-10 md:mr-10"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 md:w-8 md:h-8 md:right-10 cursor-pointer z-20 -rotate-90"
+          color="#E57C23"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </button>
     </div>
   );
 }
