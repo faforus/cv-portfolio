@@ -50,6 +50,13 @@ function Header({ snap }: Props) {
           bgColor="transparent"
           className="hover:opacity-70"
         />
+        <SocialIcon
+          url="https://gitlab.com/faforus"
+          fgColor="#E57C23"
+          bgColor="transparent"
+          className="hover:opacity-70 mt-[2px]"
+          style={{ width: "47px", height: "47px" }}
+        />
       </motion.div>
       <motion.div
         initial={{
