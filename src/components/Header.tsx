@@ -31,24 +31,28 @@ function Header({ snap }: Props) {
           fgColor="#E57C23"
           bgColor="transparent"
           className="hover:opacity-70"
+          target="_blank"
         />
         <SocialIcon
           url="https://www.instagram.com/wielechowski_fotografia/"
           fgColor="#E57C23"
           bgColor="transparent"
           className="hover:opacity-70"
+          target="_blank"
         />
         <SocialIcon
           url="https://www.linkedin.com/in/filip-wielechowski-9302b0263/"
           fgColor="#E57C23"
           bgColor="transparent"
           className="hover:opacity-70"
+          target="_blank"
         />
         <SocialIcon
           url="https://github.com/faforus"
           fgColor="#E57C23"
           bgColor="transparent"
           className="hover:opacity-70"
+          target="_blank"
         />
         <SocialIcon
           url="https://gitlab.com/faforus"
@@ -56,6 +60,7 @@ function Header({ snap }: Props) {
           bgColor="transparent"
           className="hover:opacity-70 mt-[2px]"
           style={{ width: "47px", height: "47px" }}
+          target="_blank"
         />
       </motion.div>
       <motion.div
